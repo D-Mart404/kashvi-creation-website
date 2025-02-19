@@ -1,0 +1,44 @@
+.card-container2 {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 30px;
+    cursor: grab;
+    justify-content: center;
+}
+
+.card-container2::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.card2 {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.card2:hover {
+    transform: scale(1.1);
+}
+
+.card-name2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Make the slider work on smaller screens */
+@media (max-width: 1024px) {
+    .card-container2 {
+        overflow-x: scroll;
+    }
+}

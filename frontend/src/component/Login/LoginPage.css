@@ -1,0 +1,128 @@
+/* General Body Style */
+.login-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Login Container Style - Glassmorphism */
+.login-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+/* Heading Style */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields Style */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: #333;
+  outline: none;
+}
+
+/* Focus Effect on Input Fields */
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 12px rgba(0, 198, 255, 0.8);
+  transform: scale(1.03);
+}
+
+/* Submit Button Style */
+.Login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.Login-button:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+}
+
+/* Message Style */
+.login-page-text {
+  margin-top: 15px;
+  color: #ff4f4f;
+  font-size: 14px;
+}
+
+/* Signup Link */
+.signup {
+  text-align: right;
+  color: #00c6ff;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.signup:hover {
+  color: #0072ff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .login-container {
+      width: 90%;
+      padding: 20px;
+  }
+  h2 {
+      font-size: 24px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
