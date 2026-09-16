@@ -1,9 +1,20 @@
 import mongoose from "mongoose";
 const invoiceSchema = new mongoose.Schema({
-    orderId: { type: Number, unique: true },
+    orderId: {
+      type: String,
+      unique: true,
+      default: () => `KC-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
+    },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     username: String,
-    amount: Number,
-    items: [{ name: String, quantity: Number }],
+    email: String,
+    amount: { type: Number, required: true },
+    items: [{
+      productId: Number,
+      name: String,
+      quantity: Number,
+      price: Number,
+    }],
     date: { type: Date, default: Date.now },
   });
   
